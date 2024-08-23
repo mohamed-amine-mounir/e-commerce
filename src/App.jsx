@@ -6,7 +6,7 @@ import { Home } from "./pages/pages";
 import {
   Navbar,
   ElectrCatego,
-  KitchenCatego,
+  ClothesCatego,
   SkncarCatego,
   CategoriesAll,
   LampsCatego,
@@ -24,7 +24,7 @@ function App() {
             <Route path="/shop" element=<Shop /> />
             <Route path="/cart" element=<Cart /> />
             <Route path="/categories/electronics" element={<ElectrCatego />} />
-            <Route path="/categories/kitchen" element={<KitchenCatego />} />
+            <Route path="/categories/clothes" element={<ClothesCatego />} />
             <Route path="/categories/skincare" element={<SkncarCatego />} />
             <Route
               path="/categories/furnitures"
