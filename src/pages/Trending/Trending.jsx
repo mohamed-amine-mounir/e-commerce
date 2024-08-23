@@ -100,19 +100,19 @@ import { PRODUCTS } from "../../products";
 
 const Trending = () => {
   const [startIndex, setStartIndex] = useState(0);
-  const productsToShow = 4; // Number of products to display at once
+  const productsToShow = 5; // Number of products to display at once
 
   // Filter products to only include furniture
-  const furnitureProducts = PRODUCTS.filter(
-    (product) => product.category === "chair"
-  );
+  // const furnitureProducts = PRODUCTS.filter(
+  //   (product) => product.category === "chair"
+  // );
 
   const scroll = (direction) => {
     if (direction === "left") {
       setStartIndex((prev) => Math.max(prev - 1, 0));
     } else {
       setStartIndex((prev) =>
-        Math.min(prev + 1, furnitureProducts.length - productsToShow)
+        Math.min(prev + 1, PRODUCTS.length - productsToShow)
       );
     }
   };
@@ -147,7 +147,7 @@ const Trending = () => {
             onClick={() => scroll("right")}
             className="p-2 rounded-full bg-gray-200 hover:bg-gray-300 transition duration-300"
             title="scroll right"
-            disabled={startIndex >= furnitureProducts.length - productsToShow}
+            disabled={startIndex >= PRODUCTS.length - productsToShow}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -169,9 +169,8 @@ const Trending = () => {
 
       <div className="overflow-hidden">
         <div className="flex transition-transform duration-300 ease-in-out space-x-4">
-          {furnitureProducts
-            .slice(startIndex, startIndex + productsToShow)
-            .map((product) => (
+          {PRODUCTS.slice(startIndex, startIndex + productsToShow).map(
+            (product) => (
               <div key={product.id} className="flex-none w-64">
                 <div className="bg-white rounded-lg shadow-md overflow-hidden">
                   <img
@@ -199,7 +198,8 @@ const Trending = () => {
                   </div>
                 </div>
               </div>
-            ))}
+            )
+          )}
         </div>
       </div>
     </div>

@@ -75,7 +75,7 @@ import product13 from "./assets/imgs/13.png";
 import product14 from "./assets/imgs/14.png";
 import product15 from "./assets/imgs/15.jpg";
 import product16 from "./assets/imgs/16.jpg";
-import product17 from "./assets/imgs/17.jpg";
+// import product17 from "./assets/imgs/17.jpg";
 import product18 from "./assets/imgs/18.jpg";
 import product19 from "./assets/imgs/19.jpg";
 import product20 from "./assets/imgs/20.jpg";
@@ -297,19 +297,19 @@ export const PRODUCTS = [
     weight: "4kg",
     size: "20cm x 20cm",
   },
-  {
-    id: 17,
-    category: "kitchen",
+  // {
+  //   id: 17,
+  //   category: "clothes",
 
-    productName: "Pop-Up Toaster",
-    price: 45.0,
-    productImage: product17,
-    specs:
-      " The rounded square design of the toaster allows it to fit neatly against a wall, or inside a corner. Excellent at defrosting, and with the perfect breadtoheater distance to give crunchy toast with a soft, spongey middle.",
-    texture: "Plastic",
-    weight: "3.5kg",
-    size: "20xm x 10cm",
-  },
+  //   productName: "Pop-Up Toaster",
+  //   price: 45.0,
+  //   productImage: product17,
+  //   specs:
+  //     " The rounded square design of the toaster allows it to fit neatly against a wall, or inside a corner. Excellent at defrosting, and with the perfect breadtoheater distance to give crunchy toast with a soft, spongey middle.",
+  //   texture: "Plastic",
+  //   weight: "3.5kg",
+  //   size: "20xm x 10cm",
+  // },
   {
     id: 18,
     category: "skin-care",
@@ -351,6 +351,7 @@ export const PRODUCTS = [
   },
   {
     id: 21,
+    category: "electronic",
     productName: "IPhone",
     price: 999.0,
     productImage: product21,
@@ -362,6 +363,7 @@ export const PRODUCTS = [
   },
   {
     id: 22,
+    category: "clothes",
     productName: "Macbook Pro 2022 (M1)",
     price: 1999.0,
     productImage: product22,
@@ -373,6 +375,7 @@ export const PRODUCTS = [
   },
   {
     id: 23,
+    category: "clothes",
     productName: "Cannon M50 Camera",
     price: 699.0,
     productImage: product23,
@@ -384,6 +387,8 @@ export const PRODUCTS = [
   },
   {
     id: 24,
+    category: "clothes",
+
     productName: "WLS Van Gogh Denim Jacket",
     price: 228.0,
     productImage: product24,
@@ -395,17 +400,21 @@ export const PRODUCTS = [
   },
   {
     id: 25,
+    category: "electronic",
+
     productName: "LED Light Strips",
     price: 19.99,
     productImage: product25,
     specs:
       "Cotton pads made from soft, unbleached cotton. These are made in Japan and made from 100% cotton.",
-    texture: "Cotton",
+    texture: "  AUTO SERVICE SHIRT by GOLF WANG",
     weight: "180g",
     size: "20cm x 10cm",
   },
   {
     id: 26,
+    category: "clothes",
+
     productName: "SPECTRUM LS TEE",
     price: 68.0,
     productImage: product26,
@@ -417,7 +426,9 @@ export const PRODUCTS = [
   },
   {
     id: 27,
-    productName: "AUTO SERVICE SHIRT by GOLF WANG",
+    category: "electronic",
+
+    productName: "canon",
     price: 120.0,
     productImage: product27,
     specs:
@@ -428,6 +439,8 @@ export const PRODUCTS = [
   },
   {
     id: 28,
+    category: "electronic",
+
     productName: "DON'T TRIP UNSTRUCTURED HAT",
     price: 40.0,
     productImage: product28,

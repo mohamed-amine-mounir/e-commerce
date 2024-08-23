@@ -14,10 +14,10 @@ import {
 const Home = () => {
   return (
     <>
-      <div className="container mx-auto px-4" id="home">
+      <div className="container mx-auto px-4 pt-32" id="home">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          <div className="lg:col-span-2 h-64 md:h-80 lg:h-96 group">
-            <Link to="/categories/livecomfortably" className="block h-full">
+          <div className="lg:col-span-2 h-64 md:h-80 lg:h-4/6 group">
+            <Link to="/categories/furnitures" className="block h-full">
               <div className="relative h-full overflow-hidden">
                 <img
                   src={livecomfor}
@@ -31,7 +31,7 @@ const Home = () => {
             </Link>
           </div>
 
-          <div className="h-64 md:h-80 lg:h-96 group">
+          <div className="h-64 md:h-80 lg:h-4/6 group">
             <Link to="/categories/skincare" className="block h-full">
               <div className="relative h-full overflow-hidden">
                 <img
@@ -46,8 +46,8 @@ const Home = () => {
             </Link>
           </div>
 
-          <div className="flex flex-col gap-4">
-            <div className="h-[calc(32rem/2-0.5rem)] md:h-[calc(40rem/2-0.5rem)] lg:h-[calc(24rem-0.5rem)] group">
+          <div className="flex flex-col ">
+            <div className="h-[calc(32rem/2-0.5rem)] md:h-[calc(40rem/2-0.5rem)] lg:h-1/3 group">
               <Link to="/categories/kitchen" className="block h-full">
                 <div className="relative h-full overflow-hidden">
                   <img
@@ -61,7 +61,7 @@ const Home = () => {
                 </div>
               </Link>
             </div>
-            <div className="h-[calc(32rem/2-0.5rem)] md:h-[calc(40rem/2-0.5rem)] lg:h-[calc(24rem-0.5rem)] group">
+            <div className="h-[calc(32rem/2-0.5rem)] md:h-[calc(40rem/2-0.5rem)]  lg:h-1/3  group ">
               <Link to="/categories/electronics" className="block h-full">
                 <div className="relative h-full overflow-hidden">
                   <img
