@@ -12,6 +12,7 @@ import {
   LampsCatego,
   FurnituresCatego,
   ChairsCatego,
+  ProductDetails,
 } from "./components/components.jsx";
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
             <Route path="/categories/lamps" element={<LampsCatego />} />
             <Route path="/categories/chairs" element={<ChairsCatego />} />
             <Route path="/categories/all" element={<CategoriesAll />} />
+            <Route path="/product" element={<ProductDetails />} />
           </Routes>
         </Router>
       </ShopContextProvider>
