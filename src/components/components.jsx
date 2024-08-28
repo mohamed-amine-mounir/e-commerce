@@ -1,0 +1,11 @@
+export { default as Navbar } from "./navbar/navbar";
+export { default as Categories } from "./categories/Categories";
+export { default as ElectrCatego } from "./electrCatego/electrCatego";
+export { default as ClothesCatego } from "./clothesCatego/clothesCatego";
+export { default as LivecomfrCatego } from "./livecomfrCatego/livecomfrCatego";
+export { default as SkncarCatego } from "./skncarCatego/skncarCatego";
+export { default as CategoriesAll } from "./categoriesAll/categoriesAll";
+export { default as ChairsCatego } from "./chairsCatego/ChairsCatego";
+export { default as FurnituresCatego } from "./furnituresCatego/FurnituresCatego";
+export { default as LampsCatego } from "./lampsCatego/LampsCatego";
+// export { default as ProductDetails } from "./ProductDetails/ProductDetails";
