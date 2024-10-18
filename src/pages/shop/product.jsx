@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { ShopContext } from "../../context/shop-context";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const Product = (props) => {
   const { id, productName, price, productImage } = props.data;
@@ -13,13 +13,13 @@ export const Product = (props) => {
       className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 flex flex-col h-full"
     >
       <div className="relative overflow-hidden">
-        {/* <Link to="/product"> */}
-        <img
-          src={productImage}
-          alt={productName}
-          className="w-full h-72 object-cover transition-transform duration-300 hover:scale-105"
-        />
-        {/* </Link> */}
+        <Link to="/product">
+          <img
+            src={productImage}
+            alt={productName}
+            className="w-full h-72 object-cover transition-transform duration-300 hover:scale-105"
+          />
+        </Link>
         <div className="absolute top-0 right-0 bg-green-500 text-white px-3 py-1 m-2 rounded-full text-sm font-semibold">
           New
         </div>
@@ -57,19 +57,19 @@ export const Product = (props) => {
   );
 };
 
-export const ProductList = ({ products }) => {
-  return (
-    <div className="bg-gray-100 min-h-screen py-12">
-      <div className="container mx-auto px-4">
-        <h1 className="text-5xl font-extrabold mb-12 text-center text-gray-800 leading-tight">
-          Our <span className="text-blue-600">Products</span>
-        </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-          {products.map((product) => (
-            <Product key={product.id} data={product} />
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-};
+// export const ProductList = ({ products }) => {
+//   return (
+//     <div className="bg-gray-100 min-h-screen py-12">
+//       <div className="container mx-auto px-4">
+//         <h1 className="text-5xl font-extrabold mb-12 text-center text-gray-800 leading-tight">
+//           Our <span className="text-blue-600">Products</span>
+//         </h1>
+//         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+//           {products.map((product) => (
+//             <Product key={product.id} data={product} />
+//           ))}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };

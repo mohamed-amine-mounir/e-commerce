@@ -8,4 +8,4 @@ export { default as CategoriesAll } from "./categoriesAll/categoriesAll";
 export { default as ChairsCatego } from "./chairsCatego/ChairsCatego";
 export { default as FurnituresCatego } from "./furnituresCatego/FurnituresCatego";
 export { default as LampsCatego } from "./lampsCatego/LampsCatego";
-// export { default as ProductDetails } from "./ProductDetails/ProductDetails";
+export { default as ProductDetails } from "./ProductDetails/ProductDetails";

@@ -1,9 +1,7 @@
 import { createContext, useState } from "react";
 import { PRODUCTS } from "../products";
 export const ShopContext = createContext(null);
-// tArCKING ACCESE SHOP AND CART
 
-// if i want to add new products this fun will handle that , this function will handle the changes outomaticly if i add the products on ,the file of products
 const getDefaultCart = function () {
   let cart = {};
   for (let i = 1; i <= PRODUCTS.length; i++) {
@@ -17,6 +15,7 @@ export const ShopContextProvider = function (props) {
 
   const getTotalCartAmount = () => {
     let totalAmount = 0;
+
     for (const item in cartItems) {
       if (cartItems[item] > 0) {
         let itemInfo = PRODUCTS.find(
@@ -36,7 +35,6 @@ export const ShopContextProvider = function (props) {
   const removeFromCart = function (itemId) {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
   };
-
   const updateCartItemCount = (newAmount, itemId) => {
     setCartItems((prev) => ({
       ...prev,
@@ -51,7 +49,12 @@ export const ShopContextProvider = function (props) {
     updateCartItemCount,
     getTotalCartAmount,
   };
+  // const contextvALUE = {
+  //   addToCart,
+  //   addToCart
+  //   addToCart,
 
+  // }
   return (
     <ShopContext.Provider value={contextValue}>
       {props.children}

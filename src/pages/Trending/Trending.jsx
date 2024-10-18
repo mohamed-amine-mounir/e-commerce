@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { PRODUCTS } from "../../products";
-
+import { Product } from "../shop/product";
 const Trending = () => {
   const [startIndex, setStartIndex] = useState(0);
-  const productsToShow = 5; // Number of products to display at once
+  const productsToShow = 4; // Number of products to display at once
 
   const scroll = (direction) => {
     if (direction === "left") {
@@ -68,34 +68,36 @@ const Trending = () => {
       <div className="overflow-hidden">
         <div className="flex transition-transform duration-300 ease-in-out space-x-4">
           {PRODUCTS.slice(startIndex, startIndex + productsToShow).map(
-            (product) => (
-              <div key={product.id} className="flex-none w-64">
-                <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                  <img
-                    src={product.productImage}
-                    alt={product.productName}
-                    className="w-full h-48 object-cover"
-                  />
-                  <div className="p-4">
-                    <h4 className="font-semibold text-lg mb-2">
-                      {product.productName}
-                    </h4>
-                    <p className="text-gray-600 mb-1">{product.texture}</p>
-                    <p className="text-blue-600 font-bold mb-2">
-                      ${product.price}
-                    </p>
-                    <p className="text-sm text-gray-500 mb-1">
-                      Weight: {product.weight}
-                    </p>
-                    <p className="text-sm text-gray-500 mb-4">
-                      Size: {product.size}
-                    </p>
-                    <button className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition duration-300">
-                      Add To Cart
-                    </button>
-                  </div>
-                </div>
-              </div>
+            (prod) => (
+              <Product data={prod} key={prod.id} />
+
+              // <div key={product.id} className="flex-none w-64">
+              //   <div className="bg-white rounded-lg shadow-md overflow-hidden">
+              //     <img
+              //       src={product.productImage}
+              //       alt={product.productName}
+              //       className="w-full h-48 object-cover"
+              //     />
+              //     <div className="p-4">
+              //       <h4 className="font-semibold text-lg mb-2">
+              //         {product.productName}
+              //       </h4>
+              //       <p className="text-gray-600 mb-1">{product.texture}</p>
+              //       <p className="text-blue-600 font-bold mb-2">
+              //         ${product.price}
+              //       </p>
+              //       <p className="text-sm text-gray-500 mb-1">
+              //         Weight: {product.weight}
+              //       </p>
+              //       <p className="text-sm text-gray-500 mb-4">
+              //         Size: {product.size}
+              //       </p>
+              //       <button className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition duration-300">
+              //         Add To Cart
+              //       </button>
+              //     </div>
+              //   </div>
+              // </div>
             )
           )}
         </div>

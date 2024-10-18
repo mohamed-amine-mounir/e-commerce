@@ -1,32 +1,3 @@
-// import { ShopContext } from "../../context/shop-context";
-// import { useContext } from "react";
-
-// export const CartItem = (props) => {
-//   const { id, productName, price, productImage } = props.data;
-//   const { removeFromCart, addToCart, cartItems } = useContext(ShopContext);
-//   return (
-//     <div
-//       id="cartItem"
-//       className="flex items-center border-b border-gray-200 py-4"
-//     >
-//       <img
-//         src={productImage}
-//         alt={productName}
-//         className="w-24 h-24 object-cover rounded-md mr-4"
-//       />
-//       <div id="description" className="flex-grow">
-//         <p className="text-lg font-semibold text-gray-800">{productName}</p>
-//         <p className="text-gray-600">${price.toFixed(2)}</p>
-//         <div id="countHandler">
-//           <button onClick={() => removeFromCart(id)}>-</button>
-//           <input value={CartItem[id]} />
-
-//           <button onClick={() => addToCart(id)}>+</button>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
 import { ShopContext } from "../../context/shop-context";
 import { useContext } from "react";
 
@@ -60,7 +31,6 @@ export const CartItem = (props) => {
           <input
             value={cartItems[id]}
             className="w-12 h-8 text-center border-2 border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            //  because it string we change it to number
             onChange={(e) => updateCartItemCount(Number(e.target.value), id)}
           />
           <button

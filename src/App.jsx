@@ -12,7 +12,8 @@ import {
   LampsCatego,
   FurnituresCatego,
   ChairsCatego,
-  // ProductDetails,
+  ProductDetails,
+  Categories,
 } from "./components/components.jsx";
 function App() {
   return (
@@ -21,6 +22,8 @@ function App() {
         <Router>
           <Navbar />
           <Routes>
+            <Route path="/categories/:category" element={<Categories />} />
+
             <Route path="/" element=<Home /> />
             <Route path="/shop" element=<Shop /> />
             <Route path="/cart" element=<Cart /> />
@@ -34,7 +37,7 @@ function App() {
             <Route path="/categories/lamps" element={<LampsCatego />} />
             <Route path="/categories/chairs" element={<ChairsCatego />} />
             <Route path="/categories/all" element={<CategoriesAll />} />
-            {/* <Route path="/product" element={<ProductDetails />} /> */}
+            <Route path="/product" element={<ProductDetails />} />
           </Routes>
         </Router>
       </ShopContextProvider>
